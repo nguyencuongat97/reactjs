@@ -16,7 +16,12 @@ class MyComponent extends React.Component{
        this.setState({name:event.target.value})
     };
 
+    handleClicKButton = () => {
+        alert("Click me")
+    }
+
     render(){
+        console.log('>>>>> call render : ', this.state)
         return(
             <>
                 <div className="first"> 
@@ -27,6 +32,12 @@ class MyComponent extends React.Component{
                 <div className="second">
                     my youtube channel: {this.state.channel}
                 </div>
+
+                <div className="third">
+
+                    <button onClick={() => this.handleClicKButton()}> Click me</button>
+                </div>
+
             </>
         )
     }
